@@ -1,3 +1,4 @@
+brew install  cmake boost emscripten
 export LLVM=/usr/local/opt/emscripten/libexec/llvm/bin
 export BINARYEN=/usr/local/opt/binaryen
 wget -q "https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.zip"
