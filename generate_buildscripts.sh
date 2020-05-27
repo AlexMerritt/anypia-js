@@ -17,6 +17,7 @@ do
         echo "apt install " `yq -c --raw-output ".matrix.include[] | select(.name == \"linux-anypiab\") | .addons.apt.packages | @sh" .travis.yml` > "$filename.$extention"
     else
         extention="sh"
+        echo "" > "$filename.$extension"
     fi
 
     yq -c --raw-output ".matrix.include[] | select(.name == \"$i\") | .script[]" .travis.yml >> "$filename.$extention"
